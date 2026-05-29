@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Musiques hors connexion</title>
+        <link rel="stylesheet" href="styles_musique_hors_connexion.css">
+    </head>
+    <body>
+        
+        <header>
+            <h1>Music Dashboard</h1>
+            <input type="text" id="search" placeholder="Rechercher une musique...">
+        </header>
+
+        <main>
+            <aside id="playlists">
+                <button data-playlist="AMV" class="playlist-btn">
+                    <img src="assets/covers/amv.png">
+                    <span>AMV</span>
+                </button>
+
+                <button data-playlist="TECHNO" class="playlist-btn">
+                  <img src="assets/covers/techno.png">
+                  <span>Techno</span>
+                </button>
+                
+                <button data-playlist="ANIME" class="playlist-btn">
+                  <img src="assets/covers/anime.png">
+                  <span>Animé</span>
+                </button>
+                
+                <button data-playlist="SECRET" class="playlist-btn secret">
+                  <img src="assets/covers/anime.png">
+                  <span>???</span>
+                </button>
+            </aside>
+
+            <section id="tracks">
+                <ul id="trackList"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <div id="player">
+                <span id="nowPlaying">Aucune musique</span>
+
+                <div id="progressContainer">
+                    <div id="progressBar"></div>
+                </div>
+
+                <div id="controls">
+                    <button id="playPause">⏯</button>
+                </div>
+
+                <audio id="audio"></audio>
+            </div>
+        </footer>
+
+        <script src="script_musique_hors_connexion.js"></script>
+    </body>
+</html>

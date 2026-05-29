@@ -1,0 +1,209 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #3b1d5a, #0a0a1a 60%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 20px;
+  text-align: center;
+  background: rgba(20, 10, 40, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(170,100,255,0.8);
+}
+
+header input {
+  width: 85%;
+  max-width: 450px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+}
+
+header input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===== LAYOUT ===== */
+main {
+  display: flex;
+  min-height: calc(100vh - 160px);
+}
+
+/* ===== PLAYLISTS ===== */
+aside {
+  width: 220px;
+  padding: 15px;
+  background: rgba(15, 10, 35, 0.6);
+  backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+aside button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  font-size: 0.95em;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(140,80,255,0.35),
+    rgba(80,180,255,0.35)
+  );
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+aside button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 15px rgba(140,80,255,0.7),
+    0 0 30px rgba(80,180,255,0.4);
+}
+
+aside button:active {
+  transform: scale(0.98);
+}
+
+aside .secret {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+/* ===== TRACK LIST ===== */
+#tracks {
+  flex: 1;
+  padding: 20px;
+}
+
+#trackList {
+  margin: 0;
+  padding: 0;
+}
+
+#trackList li {
+  list-style: none;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#trackList li:hover {
+  background: rgba(255,255,255,0.18);
+  box-shadow:
+    0 0 10px rgba(170,100,255,0.6);
+}
+
+/* ===== PLAYER ===== */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(10, 5, 25, 0.85);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 15px;
+}
+
+#player {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#nowPlaying {
+  font-size: 0.9em;
+  color: #cfaaff;
+  text-shadow: 0 0 10px rgba(170,100,255,0.7);
+}
+
+audio {
+  width: 100%;
+}
+
+.playlist-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.playlist-btn img {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(170,100,255,0.6);
+}
+
+.playlist-btn span {
+  font-size: 0.95em;
+  letter-spacing: 1px;
+}
+
+#progressContainer {
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #b56cff,
+    #5bd6ff
+  );
+  box-shadow:
+    0 0 15px rgba(170,100,255,0.9);
+  transition: width 0.1s linear;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+}
+
+#controls button {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  font-size: 1.2em;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  box-shadow: 0 0 15px rgba(170,100,255,0.8);
+}
